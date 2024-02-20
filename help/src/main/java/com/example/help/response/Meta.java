@@ -1,0 +1,10 @@
+package com.example.help.response;
+
+import com.fasterxml.jackson.databind.ser.Serializers;
+
+import java.io.Serializable;
+
+public class Meta extends BaseResponse implements Serializable {
+    public int errorCode;
+    public String errorDescription;
+}
