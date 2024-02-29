@@ -1,0 +1,23 @@
+server:
+  port: 7090
+eureka:
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: payment
+  datasource:
+    url: jdbc:mysql://localhost:3306/payment?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: 12345
+    hikari:
+      connection-timeout: 3000000
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialet: org.hibernate.dialect.MySQL5Dialect
+
